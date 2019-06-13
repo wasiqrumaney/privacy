@@ -46,6 +46,9 @@ tf.flags.DEFINE_boolean('save_labels', False,
                         'Dump numpy arrays of labels and clean teacher votes')
 tf.flags.DEFINE_boolean('deeper', False, 'Activate deeper CNN model')
 
+tf.flags.DEFINE_boolean('noisy_flag', False, 'Activate noisy MNIST')
+tf.flags.DEFINE_boolean('uneven_distrib', False, 'Activate uneven distribution')
+
 
 def ensemble_preds(dataset, nb_teachers, stdnt_data):
   """
@@ -159,7 +162,7 @@ def prepare_student_data(dataset, nb_teachers, save=False):
   return stdnt_data, stdnt_labels, stdnt_test_data, stdnt_test_labels
 
 
-def train_student(dataset, nb_teachers):
+def train_student(dataset, nb_teachers, noisy_flag=False, uneven_distrib=False):
   """
   This function trains a student using predictions made by an ensemble of
   teachers. The student and teacher models are trained using the same
@@ -199,7 +202,7 @@ def train_student(dataset, nb_teachers):
 
 def main(argv=None): # pylint: disable=unused-argument
   # Run student training according to values specified in flags
-  assert train_student(FLAGS.dataset, FLAGS.nb_teachers)
+  assert train_student(FLAGS.dataset, FLAGS.nb_teachers, FLAGS.noisy_flag=False, FLAGS.uneven_distrib=False)
 
 if __name__ == '__main__':
   tf.app.run()

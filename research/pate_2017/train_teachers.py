@@ -36,11 +36,12 @@ tf.flags.DEFINE_integer('teacher_id', 0, 'ID of teacher being trained.')
 tf.flags.DEFINE_boolean('deeper', False, 'Activate deeper CNN model')
 
 tf.flags.DEFINE_boolean('noisy_flag', False, 'Activate noisy MNIST')
+tf.flags.DEFINE_boolean('uneven_distrib', False, 'Activate uneven distribution')
 
 FLAGS = tf.flags.FLAGS
 
 
-def train_teacher(dataset, nb_teachers, teacher_id, noisy_flag=False):
+def train_teacher(dataset, nb_teachers, teacher_id, noisy_flag=False, uneven_distrib=False):
   """
   This function trains a teacher (teacher id) among an ensemble of nb_teachers
   models for the dataset specified.
@@ -97,7 +98,7 @@ def train_teacher(dataset, nb_teachers, teacher_id, noisy_flag=False):
 
 def main(argv=None):  # pylint: disable=unused-argument
   # Make a call to train_teachers with values specified in flags
-  assert train_teacher(FLAGS.dataset, FLAGS.nb_teachers, FLAGS.teacher_id, FLAGS.noisy_flag)
+  assert train_teacher(FLAGS.dataset, FLAGS.nb_teachers, FLAGS.teacher_id, FLAGS.noisy_flag, FLAGS.uneven_distrib)
 
 if __name__ == '__main__':
   tf.app.run()

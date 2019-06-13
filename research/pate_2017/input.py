@@ -388,6 +388,48 @@ def partition_dataset(data, labels, nb_teachers, teacher_id):
   assert len(data) == len(labels)
   assert int(teacher_id) < int(nb_teachers)
 
+  if(FLAGS.uneven_distrib == True):
+
+    if(teacher_id == 0):
+      start = 0
+      end = 999
+    elif(teacher_id == 1):
+      start = 1000
+      end = 2499
+    elif (teacher_id == 2):
+      start = 2500
+      end = 3999
+    elif (teacher_id == 3):
+      start = 4000
+      end = 8999
+    elif (teacher_id == 4):
+      start = 9000
+      end = 14999
+    elif (teacher_id == 5):
+      start = 15000
+      end = 19999
+    elif (teacher_id == 6):
+      start = 20000
+      end = 24999
+    elif (teacher_id == 7):
+      start = 25000
+      end = 30999
+    elif (teacher_id == 8):
+      start = 31000
+      end = 37999
+    elif (teacher_id == 9):
+      start = 38000
+      end = 47999
+    else:
+      start = 48000
+      end = 59999
+
+    # Slice partition off
+    partition_data = data[start:end]
+    partition_labels = labels[start:end]
+
+    return partition_data, partition_labels
+
   # This will floor the possible number of batches
   batch_len = int(len(data) / nb_teachers)
 
