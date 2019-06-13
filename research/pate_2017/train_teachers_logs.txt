@@ -1,0 +1,10 @@
+Length of training data: 600
+Done Initializing Training Placeholders
+Graph constructed and saver created
+Session ready, beginning training loop
+2019-06-06 12:05:42.800770: step 0, loss = 8.45 (55.7 examples/sec; 2.299 sec/batch)
+2019-06-06 12:09:37.852546: step 100, loss = 7.71 (44.3 examples/sec; 2.886 sec/batch)
+2019-06-06 12:14:04.008566: step 200, loss = 6.10 (49.2 examples/sec; 2.601 sec/batch)
+2019-06-06 12:18:51.623605: step 300, loss = 5.65 (45.6 examples/sec; 2.807 sec/batch)
+2019-06-06 12:23:37.515638: step 400, loss = 5.33 (47.8 examples/sec; 2.679 sec/batch)
+2019-06-06 12:27:20.503074: step 500, loss = 5.08 (65.5 examples/sec; 1.954 sec/batch)

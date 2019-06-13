@@ -1,0 +1,80 @@
+Table 2 with data-independent analysis.
+
+######## MNIST ########
+
+Reading raw votes from data/mnist_250_teachers.npy
+Shape of the votes matrix = (9000, 10)
+queries = 640, E[answered] = 282.72, E[eps] = 3.157 (std = 0.07067) at order = 9.00 (contribution from delta = 1.439)
+Nothing to do here, all analyses are data-independent.
+
+######## SVHN ########
+
+Reading raw votes from data/svhn_250_teachers.npy
+Shape of the votes matrix = (26032, 10)
+queries = 1000, E[answered] = 347.37, E[eps] = 3.793 (std = 0.08471) at order = 9.00 (contribution from delta = 1.727)
+queries = 2000, E[answered] = 694.01, E[eps] = 5.494 (std = 0.08649) at order = 6.50 (contribution from delta = 2.512)
+queries = 3000, E[answered] = 1041.82, E[eps] = 6.858 (std = 0.08965) at order = 5.50 (contribution from delta = 3.070)
+queries = 4000, E[answered] = 1394.53, E[eps] = 8.062 (std = 0.09419) at order = 5.00 (contribution from delta = 3.454)
+queries = 5000, E[answered] = 1742.92, E[eps] = 9.130 (std = 0.09477) at order = 4.50 (contribution from delta = 3.947)
+queries = 6000, E[answered] = 2091.73, E[eps] = 10.135 (std = 0.09228) at order = 4.00 (contribution from delta = 4.605)
+queries = 7000, E[answered] = 2446.81, E[eps] = 11.072 (std = 0.09974) at order = 4.00 (contribution from delta = 4.605)
+queries = 8000, E[answered] = 2796.14, E[eps] = 11.993 (std = 0.09329) at order = 3.50 (contribution from delta = 5.526)
+queries = 8500, E[answered] = 2969.09, E[eps] = 12.393 (std = 0.09615) at order = 3.50 (contribution from delta = 5.526)
+Nothing to do here, all analyses are data-independent.
+
+######## Adult ########
+
+Reading raw votes from data/adult_250_teachers.npy
+Shape of the votes matrix = (16281, 2)
+queries = 1000, E[answered] = 358.26, E[eps] = 3.536 (std = 0.07583) at order = 8.00 (contribution from delta = 1.645)
+queries = 1500, E[answered] = 538.26, E[eps] = 4.402 (std = 0.07548) at order = 6.50 (contribution from delta = 2.093)
+Nothing to do here, all analyses are data-independent.
+
+######## Glyph (Confident) ########
+
+Reading raw votes from data/glyph_5000_teachers.npy
+Shape of the votes matrix = (25541, 150)
+queries = 1000, E[answered] = 915.37, E[eps] = 2.719 (std = 0.01313) at order = 15.00 (contribution from delta = 1.316)
+queries = 2000, E[answered] = 1825.40, E[eps] = 3.894 (std = 0.01385) at order = 11.00 (contribution from delta = 1.842)
+queries = 3000, E[answered] = 2718.41, E[eps] = 4.803 (std = 0.01435) at order = 9.00 (contribution from delta = 2.303)
+queries = 4000, E[answered] = 3616.00, E[eps] = 5.588 (std = 0.01489) at order = 8.00 (contribution from delta = 2.632)
+queries = 5000, E[answered] = 4532.44, E[eps] = 6.308 (std = 0.01543) at order = 7.50 (contribution from delta = 2.834)
+queries = 6000, E[answered] = 5437.01, E[eps] = 6.960 (std = 0.01580) at order = 7.00 (contribution from delta = 3.070)
+queries = 7000, E[answered] = 6341.00, E[eps] = 7.562 (std = 0.01587) at order = 6.50 (contribution from delta = 3.349)
+queries = 8000, E[answered] = 7256.67, E[eps] = 8.134 (std = 0.01557) at order = 6.00 (contribution from delta = 3.684)
+queries = 9000, E[answered] = 8159.92, E[eps] = 8.680 (std = 0.01517) at order = 5.50 (contribution from delta = 4.093)
+queries = 10000, E[answered] = 9065.64, E[eps] = 9.190 (std = 0.01600) at order = 5.50 (contribution from delta = 4.093)
+queries = 11000, E[answered] = 9966.94, E[eps] = 9.696 (std = 0.01682) at order = 5.50 (contribution from delta = 4.093)
+queries = 12000, E[answered] = 10871.20, E[eps] = 10.161 (std = 0.01598) at order = 5.00 (contribution from delta = 4.605)
+Nothing to do here, all analyses are data-independent.
+
+######## Glyph (Interactive, Round 1) ########
+
+Reading raw votes from data/glyph_round1.npy
+Shape of the votes matrix = (6000, 150)
+Process all 6000 input rows. (Use --queries flag to truncate.)
+queries = 1000, E[answered] = 582.23, E[eps] = 2.134 (std = 0.02963) at order = 19.00 (contribution from delta = 1.023)
+queries = 2000, E[answered] = 1159.74, E[eps] = 3.045 (std = 0.02980) at order = 13.50 (contribution from delta = 1.474)
+queries = 3000, E[answered] = 1710.36, E[eps] = 3.729 (std = 0.03118) at order = 11.50 (contribution from delta = 1.754)
+queries = 4000, E[answered] = 2279.55, E[eps] = 4.335 (std = 0.03131) at order = 10.00 (contribution from delta = 2.047)
+queries = 5000, E[answered] = 2857.04, E[eps] = 4.884 (std = 0.03149) at order = 9.00 (contribution from delta = 2.303)
+queries = 6000, E[answered] = 3434.96, E[eps] = 5.387 (std = 0.03257) at order = 8.50 (contribution from delta = 2.456)
+Nothing to do here, all analyses are data-independent.
+
+######## Glyph (Interactive, Round 2) ########
+
+Reading raw votes from data/glyph_round2.npy
+Shape of the votes matrix = (10000, 150)
+Reading baseline values from data/glyph_round2_student.npy
+Process all 10000 input rows. (Use --queries flag to truncate.)
+queries = 1000, E[answered] = 109.54, E[eps] = 2.480 (std = 0.00210) at order = 8.50 (contribution from delta = 2.456)
+queries = 2000, E[answered] = 218.77, E[eps] = 2.505 (std = 0.00297) at order = 8.50 (contribution from delta = 2.456)
+queries = 3000, E[answered] = 323.18, E[eps] = 2.528 (std = 0.00361) at order = 8.50 (contribution from delta = 2.456)
+queries = 4000, E[answered] = 433.54, E[eps] = 2.552 (std = 0.00418) at order = 8.50 (contribution from delta = 2.456)
+queries = 5000, E[answered] = 535.36, E[eps] = 2.575 (std = 0.00465) at order = 8.50 (contribution from delta = 2.456)
+queries = 6000, E[answered] = 639.29, E[eps] = 2.598 (std = 0.00508) at order = 8.50 (contribution from delta = 2.456)
+queries = 7000, E[answered] = 750.90, E[eps] = 2.623 (std = 0.00550) at order = 8.50 (contribution from delta = 2.456)
+queries = 8000, E[answered] = 854.60, E[eps] = 2.646 (std = 0.00587) at order = 8.50 (contribution from delta = 2.456)
+queries = 9000, E[answered] = 965.81, E[eps] = 2.671 (std = 0.00624) at order = 8.50 (contribution from delta = 2.456)
+queries = 10000, E[answered] = 1068.34, E[eps] = 2.694 (std = 0.00656) at order = 8.50 (contribution from delta = 2.456)
+Nothing to do here, all analyses are data-independent.
