@@ -357,6 +357,7 @@ def ld_mnist(test_only=False):
   if(FLAGS.noisy_flag == True):
     for i, url in enumerate(local_urls):
       local_urls[i]=url.replace(FLAGS.data_dir+'/', FLAGS.data_dir+'/noisy_')
+      print(FLAGS.noisy_flag)
 
   # Extract it into np arrays.
   train_data = extract_mnist_data(local_urls[0], 60000, 28, 1)

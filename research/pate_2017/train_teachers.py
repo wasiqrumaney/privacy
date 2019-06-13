@@ -40,7 +40,7 @@ tf.flags.DEFINE_boolean('noisy_flag', False, 'Activate noisy MNIST')
 FLAGS = tf.flags.FLAGS
 
 
-def train_teacher(dataset, nb_teachers, teacher_id):
+def train_teacher(dataset, nb_teachers, teacher_id, noisy_flag=False):
   """
   This function trains a teacher (teacher id) among an ensemble of nb_teachers
   models for the dataset specified.
@@ -97,7 +97,7 @@ def train_teacher(dataset, nb_teachers, teacher_id):
 
 def main(argv=None):  # pylint: disable=unused-argument
   # Make a call to train_teachers with values specified in flags
-  assert train_teacher(FLAGS.dataset, FLAGS.nb_teachers, FLAGS.teacher_id)
+  assert train_teacher(FLAGS.dataset, FLAGS.nb_teachers, FLAGS.teacher_id, FLAGS.noisy_flag)
 
 if __name__ == '__main__':
   tf.app.run()
