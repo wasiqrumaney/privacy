@@ -46,6 +46,9 @@ tf.flags.DEFINE_boolean('save_labels', False,
                         'Dump numpy arrays of labels and clean teacher votes')
 tf.flags.DEFINE_boolean('deeper', False, 'Activate deeper CNN model')
 
+tf.flags.DEFINE_boolean('noisy_flag', False, 'Activate noisy MNIST')
+tf.flags.DEFINE_boolean('uneven_distrib', False, 'Activate uneven distribution')
+
 
 def ensemble_preds(dataset, nb_teachers, stdnt_data):
   """
