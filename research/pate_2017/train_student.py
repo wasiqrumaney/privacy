@@ -202,7 +202,7 @@ def train_student(dataset, nb_teachers, noisy_flag=False, uneven_distrib=False):
 
 def main(argv=None): # pylint: disable=unused-argument
   # Run student training according to values specified in flags
-  assert train_student(FLAGS.dataset, FLAGS.nb_teachers, FLAGS.noisy_flag=False, FLAGS.uneven_distrib=False)
+  assert train_student(FLAGS.dataset, FLAGS.nb_teachers, FLAGS.noisy_flag, FLAGS.uneven_distrib)
 
 if __name__ == '__main__':
   tf.app.run()
