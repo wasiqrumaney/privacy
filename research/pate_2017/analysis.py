@@ -44,7 +44,7 @@ import numpy as np
 from six.moves import xrange
 import tensorflow as tf
 
-import maybe_download
+import input
 
 # These parameters can be changed to compute bounds for different failure rates
 # or different model predictions.
@@ -224,12 +224,12 @@ def main(unused_argv):
     "https://github.com/npapernot/multiple-teachers-for-privacy/blob/master/mnist_250_teachers_100_indices_used_by_student.npy?raw=true"]
   if FLAGS.counts_file == "mnist_250_teachers_labels.npy" \
     or FLAGS.indices_file == "mnist_250_teachers_100_indices_used_by_student.npy":
-    maybe_download(paper_binaries_mnist, os.getcwd())
+    input.maybe_download(paper_binaries_mnist, os.getcwd())
 
   # Binaries for SVHN results
   paper_binaries_svhn = ["https://github.com/npapernot/multiple-teachers-for-privacy/blob/master/svhn_250_teachers_labels.npy?raw=true"]
   if FLAGS.counts_file == "svhn_250_teachers_labels.npy":
-    maybe_download(paper_binaries_svhn, os.getcwd())
+    input.maybe_download(paper_binaries_svhn, os.getcwd())
 
   input_mat = np.load(FLAGS.counts_file)
   if FLAGS.input_is_counts:
